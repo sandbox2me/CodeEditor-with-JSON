@@ -2,20 +2,20 @@ ace.require("ace/ext/language_tools");
 var Range = ace.require("ace/range").Range;
 var curMarker = [];
 
-var codeEditor = ace.edit("code_editor");
-codeEditor.setTheme("ace/theme/github");
-codeEditor.getSession().setMode("ace/mode/javascript");
-codeEditor.setOptions({
-	enableBasicAutocompletion: true,
-	enableSnippets: true,
-	enableLiveAutocompletion: true,
-});
+// var codeEditor = ace.edit("code_editor");
+// codeEditor.setTheme("ace/theme/github");
+// codeEditor.getSession().setMode("ace/mode/javascript");
+// codeEditor.setOptions({
+// 	enableBasicAutocompletion: true,
+// 	enableSnippets: true,
+// 	enableLiveAutocompletion: true,
+// });
 
 var jsonEditor = ace.edit("json_editor");
 jsonEditor.setTheme("ace/theme/github");
 jsonEditor.getSession().setMode("ace/mode/json");
-jsonEditor.setReadOnly(true);
-jsonEditor.setHighlightActiveLine(false);
+jsonEditor.setReadOnly(false);
+jsonEditor.setHighlightActiveLine(true);
 jsonEditor.on('click', function(){
 	regex = /"(\w+?)"/,
 	count = 0,
